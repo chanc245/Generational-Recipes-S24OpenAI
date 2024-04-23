@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Hello, Web GPT!</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="right-half">
+        <img src="./img/robot.png" style="width:120%;">
+      </div>
+      <div class="left-half">
+        <h2>Welcome to Grandma's kitchen 𓌉◯𓇋</h2>
+
+        <!-- user inputs -->
+        <h3>What cuisine of food would you like to have today?</h3>
+        <input id="cuisine" type="text" placeholder="cuisine" />
+        <h3>
+          What is the flavour profile of the food? [spicy/ sweet / sour/ salty/
+          bitter]
+        </h3>
+        <input id="flavour" type="text" placeholder="flavour" />
+        <h3>
+          Let's narrow it down. Are you leaning towards something to drink,
+          something snack-sized, or a full meal?
+        </h3>
+        <input id="category" type="text" placeholder="meal category" />
+
+        <h3>
+          Any other specification?
+        </h3>
+        <input id="specification" type="text" placeholder="specification" />
+
+        <br />
+        <br />
+        <button id="send" style="justify-content: center">Find A Recipe</button>
+        <div id="output" class="left-half"></div>
+      </div>
+      <br />
+        
+      </div>
+    </div>
+    <div id="output" class="p-4"></div>
+
+    <script>
+      const cuisineName = document.getElementById("cuisine");
+      const flavourName = document.getElementById("flavour");
+      const categoryName = document.getElementById("category");
+      const specificationName = document.getElementById("specification");
+
+      const sendElement = document.getElementById("send");
+      sendElement.addEventListener("click", () => {
+        fetch(
+          `/api/gpt?cuisine=${cuisineName.value}&flavour=${flavourName.value}&category=${categoryName.value}&specification=${specificationName.value}`
+        )
+          .then((response) => response.text())
+          .then((responseText) => {
+            window.location.href = `/scene1.html?response=${encodeURIComponent(responseText)}`;
+          });
+      });
+    </script>
+  </body>
+</html>

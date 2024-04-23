@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+
+body {
+  background-image: url(./img/groceryStore.png);
+  background-color: rgba(255, 255, 255, 0.8);
+  /* background-color: #d6d7c4; */
+  font-family: "Press Start 2P", cursive;
+  color: rgb(17, 33, 26);
+  font-size: 12px;
+  line-height: 1.75;
+  margin: 5%;
+  text-align: left;
+}
+
+a {
+  background-color: black;
+  color: aliceblue;
+}
+
+h3 {
+  font-size: 12px;
+}
+
+#pages {
+  position: relative;
+}
+
+input {
+  font-family: inherit;
+  border: 2px solid black;
+  outline: none;
+  width: 60%;
+  height: 8%;
+}
+
+.container {
+  display: flex;
+}
+
+.left-half {
+  background-color: aliceblue;
+  width: 80%;
+  padding: 3% 4%;
+  margin: 4%;
+}
+
+#send {
+  font-family: inherit;
+  padding: 2%;
+  position: relative;
+  top: 10px;
+  right: 400px;
+  background-color: rgb(159, 220, 219);
+}
+
+#send:hover {
+  background-color: rgb(241, 48, 34);
+  opacity: 90%;
+}
+
+.btn {
+  font-family: inherit;
+  padding: 2%;
+  position: relative;
+  top: 10px;
+  background-color: rgb(159, 220, 219);
+}
+
+.btn:hover {
+  background-color: rgb(110, 238, 204);
+}
+
+.right-half {
+  width: 40%;
+  padding: 20px;
+  text-align: left;
+}
+
+#output {
+  width: 90%; /* Adjust the width as needed */
+  float: left; /* Float the output div to the left */
+  margin-top: 5%;
+}
+
+#robot-head {
+  position: relative;
+  width: 10px;
+  top: -1000px;
+}
+
+#main {
+  /* display: none; */
+  -webkit-user-select: none;
+  /* Safari */
+  -ms-user-select: none;
+  /* IE 10 and IE 11 */
+  user-select: none;
+  /* Standard syntax */
+}
+
+.inter {
+  font-family: inherit;
+  left: 500px;
+  border: 5px double #9e9e9e9e;
+  padding: 10px;
+}
+
+#commandDiv {
+  font-family: inherit;
+  height: 10vh;
+  width: 42vw;
+  overflow-x: auto;
+  overflow-y: auto;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  /* justify-content: center; */
+
+  background-color: rgb(39, 39, 39);
+}
